@@ -44,7 +44,7 @@ let timer2;
       // setquestion(array[i].question);
       setData(array[i++]);
       setCurrentIdx((prev)=>prev+1);
-      if(i==1){
+      if(i==11){
         clearInterval(timer)
         clearInterval(timer2)
       }
@@ -55,11 +55,13 @@ let timer2;
     },1000)
   }
   function skipQues(idx){
-    console.log(dataArr, idx);
-    setquestion(dataArr[idx].question);
-    // setData(dataArr[idx]);
-    setCurrentIdx((prev)=>prev+1);
-    setTimer((prev)=>prev=10)
+    if(idx<10){
+      setquestion(dataArr[idx].question);
+      // setData(dataArr[idx]);
+      setCurrentIdx((prev)=>prev+1);
+      setTimer((prev)=>prev=10)
+    }
+ 
   }
 
   return <div className="App">

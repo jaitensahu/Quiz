@@ -1,7 +1,7 @@
 import "./Question.css";
 
 const Question = (props) => {
-  console.log(props);
+  // console.log(props);
   function veryFn(){
 
   }
